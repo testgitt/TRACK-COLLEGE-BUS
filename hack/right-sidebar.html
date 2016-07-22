@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Linear by TEMPLATED</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+	</head>
+	<body>
+
+	<!-- Header -->
+		<div id="header">
+			<div id="nav-wrapper"> 
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						
+						<li><a href="bleeee.html">LOGIN</a></li>
+						<li><a href="nosidebar.html">SIGN UP</a></li>
+						<li>CHAT ROOM</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="container"> 
+				
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="#">CHAT BOX</a></h1>
+					
+				</div>
+			</div>
+		</div>
+<style>
+.error {color: #FF000;}
+</style>
+</head>
+<body>
+<?php
+$comment= "";
+if($_SERVER["REQUEST_METHOD"]== "POST"){
+   if(empty($_POST["comment"])){
+   $comment="";
+   }
+   else
+   {
+   $comment=test_input($_POST["comment"]);
+   }
+}
+   function test_input($data)
+   {
+   $data=trim($data);
+   
+   $data=htmlspecialchars($data);
+   return $data;
+   }
+   
+   
+
+
+?>
+<p><span class="error"></span></p>
+<h1> <b> START YOUR CHATS HERE :)</b></h1>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+ CHATS:<textarea name="chats" row="5" cols="40">
+ </textarea><br><br>
+ <input type="submit" name="submit" value="Submit">
+ </form>
+ <?php
+ 
+	
+							
+
+
+	</body>
+</html>
